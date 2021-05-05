@@ -8,7 +8,7 @@
 [Project 2 Link](https://github.com/drdataSpp/ML-App2-Loan-Approval-Predictor)
 
 ## Project 3: Helping Farmers to Determine Crop
-[Project 3 Link](https://github.com/drdataSpp/ML-App4-Crop-Determining-AI-App)
+[Project 3 Link](https://github.com/drdataSpp/ML-App3-Crop-Determining-AI-App)
 
 ## License
 **Copyright 2021 Soorya Prakash Parthiban**
