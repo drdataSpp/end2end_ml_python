@@ -25,7 +25,7 @@
 
 **Project description:** Finance companies deals with some kinds of home loans. They may have their presence across urban, semi urban and rural areas. Customer first applies for home loan and after that company validates the customer eligibility for loan. Mostly Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others.
 
-**Solution:** To automate the loan approval process, I have created a HTML form that captures all the data about the loan applicant and sends it to the machine learning classification algorithm running in the backend to predict the outcome.
+**Solution:** I have created a HTML form that captures all the data about the loan applicant and sends it to the machine learning classification algorithm running in the backend to predict the outcome.
 
 **Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
 
@@ -39,7 +39,7 @@
 
 **Project description:** Precision agriculture is in trend nowadays. It helps the farmers to get informed decision about the farming strategy. This projects allows me to build a predictive model to recommend the most suitable crops to grow in a particular farm based on various parameters.
 
-**Solution:** To automate the loan approval process, I have created a HTML form that captures all the data about the loan applicant and sends it to the machine learning classification algorithm running in the backend to predict the outcome.
+**Solution:** I have created a ML model that gets all the details about the farm and recommends the best crop for that particular farm based on its attributes.
 
 **Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
 
@@ -53,7 +53,7 @@
 
 **Project description:** Imagine that you are a medical researcher compiling data for a study. You have collected data about a set of patients, all of whom suffered from the same illness. During their course of treatment, each patient responded to one of 5 medications, Drug A, Drug B, Drug c, Drug x and y. Part of your job is to build a model to find out which drug might be appropriate for a future patient with the same illness. The features of this dataset are Age, Sex, Blood Pressure, and the Cholesterol of the patients, and the target is the drug that each patient responded to. It is a sample of multiclass classifier, and you can use the training part of the dataset to build a decision tree, and then use it to predict the class of a unknown patient, or to prescribe a drug to a new patient.
 
-**Solution:** To automate the loan approval process, I have created a HTML form that captures all the data about the loan applicant and sends it to the machine learning classification algorithm running in the backend to predict the outcome.
+**Solution:** I have created a ML model that gets all the details about the patient and recommend the best and suitable drug for them based on historical dataset.
 
 **Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
 
@@ -67,7 +67,22 @@
 
 **Project description:** Building a model to predict whether a customer would be interested in Vehicle Insurance is extremely helpful for the company because it can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue. Now, in order to predict, whether the customer would be interested in Vehicle insurance, you have information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc.
 
-**Solution:** To automate the loan approval process, I have created a HTML form that captures all the data about the loan applicant and sends it to the machine learning classification algorithm running in the backend to predict the outcome.
+**Solution:** I have created a ML model that gets all the details about the customer and predict whether will they be interested or not interested to purchase the vehicle insurance.
+
+**Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
+
+
+## Project 6: Breast Cancer Detection AI App
+
+### Breast Cancer Detector AI-Web App
+
+![App Logo](https://github.com/drdataSpp/ML-App6-Breast-Cancer-Detector/blob/master/breast-cancer-app.gif)
+
+[Project 6 Link](https://github.com/drdataSpp/ML-App6-Breast-Cancer-Detector)
+
+**Project description:** Cytology features of breast cancer biopsy. It can be used to predict breast cancer from cytology features. Data contains cytology features of breast cancer biopsies - clump thickness, uniformity of cell size, uniformity of cell shape, marginal adhesion, single epithelial cell size, bare nuclei, bland chromatin, normal nuceloli, mitosis. The class variable denotes whether it was cancer or not. Cancer = 1 and not cancer = 0.
+
+**Solution:** I have created a ML model that gets all the details about the breast cancer biopsy and predict between 0 for benign or 1 for malignant.
 
 **Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
 
