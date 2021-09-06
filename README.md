@@ -87,5 +87,20 @@
 **Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
 
 
+## Project 7: Spotify Music Recommender AI App
+
+### Spotify Music Recommender AI App
+
+![App Logo](https://github.com/drdataSpp/Spp-End2End-ML-Projects/blob/master/Music-Recommender-App.gif)
+
+[Project 7 Link](https://github.com/drdataSpp/ML-App7-Spotify-Music-Recommender-API)
+
+**Project description:** Predicting whether one will like or dislike a song using the data from the Spotify's API.
+
+**Solution:** I have created a ML model that gets all the details about the song in the [Spotify API format](https://developer.spotify.com/documentation/web-api/) and predicts 0 for disliked and 1 for Liked.
+
+**Tools Used:** HTML, CSS, Python for Machine Learning and Flask Framework.
+
+
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
