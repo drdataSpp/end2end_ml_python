@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type="text/css">
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background: #FAF1E6;
+  padding: 0 10px;
+}
+
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 4px 4px 25px #000;
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #264653;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #264653;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background: #264653;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #FAF1E6;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+</style>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Drug Recommendation App</title>
+</head>
+
+<body>
+
+<br>
+
+<center>
+  <H1 style="color:#264653;"> Drug Recommender App</H1>
+</center>
+
+<div class="wrapper">
+    <div class="title">
+      Fill the form to find the <em>best drug for you!</em>
+    </div>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="form">
+
+        <div class="inputfield">
+          <label>Enter your Age</label>
+          <input type="number" class="input" name="ageBox" min="0">
+        </div> 
+
+        <div class="inputfield">
+            <label>Gender</label>
+            <div class="custom_select">
+              <select name="genderBox">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Your Cholesterol Level</label>
+            <div class="custom_select">
+              <select name="cholesterolBox">
+                <option value="">Select</option>
+                <option value="cholesterolHigh">High</option>
+                <option value="cholesterolLow">Low</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+          <label>Your BP Level</label>
+          <div class="custom_select">
+            <select name="bpBox">
+              <option value="">Select</option>
+              <option value="bpHigh">High</option>
+              <option value="bpLow">Low</option>
+              <option value="bpNormal">Normal</option>
+            </select>
+          </div>
+        </div>  
+
+        <div class="inputfield">
+          <label>Enter the Na_to_K Value</label>
+          <input type="number" step="0.001" class="input" name="naToKBox" min="0">
+        </div> 
+
+        <div class="inputfield">
+          <input type="submit" value="Predict" class="btn">
+        </div>
+      </form>
+    </div>   
+</div>
+
+  <br>
+
+  <center><p><font size="5.5" color="#264653">{{ prediction_text }}</font></p></center> <br><br>
+
+	
+</body>
+</html>
