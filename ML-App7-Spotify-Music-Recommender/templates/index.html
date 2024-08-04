@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type="text/css">
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: #50CB93;
+  padding: 0 10px;
+}
+
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #003049;
+  margin: 50px auto;
+  box-shadow: 4px 4px 25px #000;
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fcbf49;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #f1faee;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #264653;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: #457b9d;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+</style>
+
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spotify Recommendation</title>
+	<link rel="stylesheet" href="templates/css/style.css">
+</head>
+
+<body>
+
+<br>
+
+<center>
+  <H1 style="color:#264653;"> <i>Spotify Music Recommendation App</i></H1>
+</center>
+
+<div class="wrapper">
+
+      <form action="{{ url_for('predict')}}" method="post">
+        <div class="form">
+
+          <div class="inputfield">
+             <label>Danceability</label>
+             <input type="number" class="input" name="danceabilityBox" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Energy</label>
+             <input type="number" class="input" name="energyBox" min="0" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Key</label>
+             <input type="number" class="input" name="keyBox" min="0">
+          </div>
+
+          <div class="inputfield">
+             <label>Loudness</label>
+             <input type="number" class="input" name="loudnessBox" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Mode</label>
+             <input type="number" class="input" name="modeBox" min="0">
+          </div>
+
+          <div class="inputfield">
+             <label>Speechiness</label>
+             <input type="number" class="input" name="speechinessBox" step="any">
+          </div>
+
+          <div class="inputfield">
+            <label>Acousticness</label>
+            <input type="number" class="input" name="acousticnessBox" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Instrumentalness</label>
+             <input type="number" class="input" name="instrumentalnessBox" min="0" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Liveness</label>
+             <input type="number" class="input" name="livenessBox" min="0" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Valence</label>
+             <input type="number" class="input" name="valenceBox" min="0" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Tempo</label>
+             <input type="number" class="input" name="tempoBox" min="0" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Duration in MS</label>
+             <input type="number" class="input" name="durationBox" step="any">
+          </div>
+
+          <div class="inputfield">
+             <label>Time Signature</label>
+             <input type="number" class="input" name="TimeSignatureBox" min="0">
+          </div>
+
+          <div class="inputfield">
+            <input type="submit" value="Predict" class="btn">
+          </div>
+      </div>
+    </form>
+</div>
+
+  <br>
+
+  <center><p><font size="6.5" color="#264653">{{ prediction_text }}</font></p></center> <br><br>
+
+
+</body>
+</html>
